@@ -50,3 +50,28 @@ const arrow_func_returns_object = (name, lastname) => ( // заключить е
     }
 );
 
+
+// стрелочные функции также используются для ограничения области видимости
+// пример из книги
+/*
+const tahoe = {
+    mountains: ['Freel', 'Rose', 'Tallac'],
+    print: function(delay = 1000) {
+        setTimeout(function() {
+            console.log(this.mountains.join(', '))
+        }, delay)
+    }
+}
+*/
+// отдаст ошибку, поскольку невозможно прочитать join свойство от undefined
+const tahoe = {
+    mountains: ['Freel', 'Rose', 'Tallac'],
+    print: function(delay = 1000) {
+        // решает проблему стрелочная функция
+        setTimeout(() => {
+            console.log(this.mountains.join(', '))
+        }, delay)
+    }
+}
+
+tahoe.print()
