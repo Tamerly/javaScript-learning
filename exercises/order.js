@@ -14,6 +14,9 @@ Examples
 function order(words) {
     let words_list = words.split(' ')
     let sorted = []
+    for (let k = 0; k < words_list.length; k++) {
+        sorted[k] = k
+    }
 
     for (let i = 0; i < words_list.length; i++) {
         let i_word = words_list[i]
@@ -23,14 +26,15 @@ function order(words) {
 
             if (!isNaN(parseFloat(i_word[j])) && isFinite(i_word[j])) {
                 console.log('Искомое', i_word[j], typeof(i_word[j]))
-                sorted.splice(Number(i_word[j]) - 1, 0, i_word)
+                sorted[Number(i_word[j])] = i_word
             }
         }
     }
+    delete sorted[0]
     return sorted.join(' ')
 }
 
 console.log(order("is2 Thi1s T4est 3a"))
 
-// этот кейс выдет неверно
+//теперь верно
 console.log(order('4of Fo1r pe6ople g3ood th5e the2'))
