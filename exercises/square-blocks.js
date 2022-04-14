@@ -31,3 +31,15 @@ console.log(isSquare(4))
 console.log(isSquare(5))
 console.log(isSquare(25))
 console.log(isSquare(26))
+
+
+/* альтернативные решения
+function isSquare(n) {
+  return Math.sqrt(n) % 1 === 0;
+}
+
+у меня ветка if else лишняя
+var isSquare = function(n){
+  return Number.isInteger(Math.sqrt(n));
+}
+*/
