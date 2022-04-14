@@ -13,24 +13,23 @@ Examples
 
 function order(words) {
     let words_list = words.split(' ')
+    const dictionary = {}
     let sorted = []
-    for (let k = 0; k < words_list.length; k++) {
-        sorted[k] = k
-    }
 
     for (let i = 0; i < words_list.length; i++) {
         let i_word = words_list[i]
         console.log(i_word)
-        console.log(sorted)
         for (let j = 0; j < i_word.length; j++) {
 
             if (!isNaN(parseFloat(i_word[j])) && isFinite(i_word[j])) {
                 console.log('Искомое', i_word[j], typeof(i_word[j]))
-                sorted[Number(i_word[j])] = i_word
+                dictionary[Number(i_word[j]) - 1] = i_word
             }
         }
     }
-    delete sorted[0]
+    for (let j = 0; j < words_list.length; j++) {
+        sorted[j] = dictionary[j]
+    }
     return sorted.join(' ')
 }
 
