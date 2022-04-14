@@ -3,7 +3,7 @@ const logString = function() {
     console.log('functional-expressions.js')
 }
 
-// преимущество перед объявлением функции в том, что выражения не записываются в память
+// различие функциональных выражений и функций в том, что первые нельзя вызывать перед объявлением
 
 // передача аргументов
 const logString_withArg = function(item, message) {
