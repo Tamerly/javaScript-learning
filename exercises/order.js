@@ -37,3 +37,13 @@ console.log(order("is2 Thi1s T4est 3a"))
 
 //теперь верно
 console.log(order('4of Fo1r pe6ople g3ood th5e the2'))
+
+// решение через регулярное выражение
+/*
+function order(words){
+  
+  return words.split(' ').sort(function(a, b){
+      return a.match(/\d/) - b.match(/\d/);
+   }).join(' ');
+}    
+*/
