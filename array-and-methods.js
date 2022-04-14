@@ -16,3 +16,19 @@ let some_letters_array = ['a', 'd', 'g']
 
 let some_nmbers_and_letters_array = some_numbers_array.concat(some_letters_array)
 console.log('Метод возвращает новый массив склейкой numbers и letters', some_nmbers_and_letters_array)
+
+let array_needs_to_be_shuffle = [1, 2, 3, 4, 5, 6, 7]
+
+function shuffle(input) {
+    for (let i = input.length - 1; i >= 0; i --) {
+        let random_index = Math.floor(Math.random() * (i + 1));
+        let itemAtIndex = input[random_index];
+        input[random_index] = input[i];
+        input[i] = itemAtIndex;
+    }
+    return input
+}
+
+let suffled_array = shuffle(array_needs_to_be_shuffle)
+
+console.log(shuffle(suffled_array))
