@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div class="pictureContainer">
+            <img class="theImage" src="image/Orb-BLUE.jpg" alt="">
+        </div>
+        <div class="pictureContainer">
+            <img class="theImage" src="image/Orb-GREEN.jpg" alt="">
+        </div>
+        <div class="pictureContainer">
+            <img class="theImage" src="image/Orb-RAINBOW2.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let iElement = document.querySelector(".pictureContainer")
+        console.log(iElement)
+        let jElement = document.querySelectorAll(".pictureContainer")
+        console.log(jElement, '/n')
+        let images = document.querySelectorAll(".theImage")
+
+        for (let i = 0; i < images.length; i++) {
+            let image = images[i]
+            console.log(image.getAttribute("src"))
+        }
+        /* вывод
+        image/Orb-BLUE.jpg
+        image/Orb-GREEN.jpg
+        image/Orb-RAINBOW2.jpg
+        */
+    </script>
+</body>
+</html>

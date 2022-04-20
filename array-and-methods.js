@@ -32,3 +32,15 @@ function shuffle(input) {
 let suffled_array = shuffle(array_needs_to_be_shuffle)
 
 console.log(shuffle(suffled_array))
+
+//оператор распространения 
+
+const peaks = ['Tallac', 'Raltson', 'Rose']
+const canyons = ['Ward', 'Blackwood']
+const tahoe = [...peaks, ...canyons]
+console.log(tahoe) //[ 'Tallac', 'Raltson', 'Rose', 'Ward', 'Blackwood' ]
+
+// последний элемент с помощью оператора распространения
+const [last] = [...peaks].reverse()
+console.log(last)
+
